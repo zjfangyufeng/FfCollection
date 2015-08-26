@@ -45,7 +45,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     private void initData() {
         list = new ArrayList();
-        for(int i=0;i<1000;i++)
+        for(int i=0;i<1000;i++) 
             list.add("ff"+i);
     }
 
