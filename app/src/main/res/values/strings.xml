@@ -3,4 +3,8 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_alarm">Alarm</string>
+    <item name="TAG_NOE" type="id"></item>
+    <item name="TAG_TWO" type="id"></item>
+    <string name="title_activity_touch_event_dispatch_demo">TouchEventDispatchDemo</string>
 </resources>

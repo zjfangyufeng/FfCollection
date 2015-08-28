@@ -1,21 +1,21 @@
-package com.ff.demo;
+package com.ff.demo.activity;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.ff.demo.adapter.RecyclerDivider;
+import com.ff.demo.R;
+import com.ff.demo.activity.Alarm;
+import com.ff.demo.activity.TouchEventDispatchDemo;
+import com.ff.demo.adapter.RecyclerViewDivider;
 import com.ff.demo.adapter.RecyclerViewAdapter;
+import com.ff.demo.model.RecyclerViewItem;
+import com.ff.demo.utils.MyDisplayMetrics;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,28 +25,30 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     Button btn;
     RecyclerView recyclerView;
-    List<String> list;
+    List<RecyclerViewItem> list;
     RecyclerViewAdapter recyclerViewAdapter;
     LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
     GridLayoutManager gridLayoutManager = new GridLayoutManager(this,4);
-    StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(4,LinearLayoutManager.VERTICAL);
-    @Override
+    StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(4,LinearLayoutManager.HORIZONTAL);
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
         initData();
+        MyDisplayMetrics.init(this);
         recyclerViewAdapter = new RecyclerViewAdapter(list);
-        recyclerView.addItemDecoration(new RecyclerDivider(this,LinearLayoutManager.VERTICAL));
+        recyclerView.addItemDecoration(new RecyclerViewDivider(this,LinearLayoutManager.VERTICAL));
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
     }
 
     private void initData() {
         list = new ArrayList();
-        for(int i=0;i<1000;i++) 
-            list.add("ff"+i);
+        RecyclerViewItem recyclerViewItem = new RecyclerViewItem("alarm",Alarm.class);
+        list.add(recyclerViewItem);
+        recyclerViewItem = new RecyclerViewItem("TouchEvent事件分发机制",TouchEventDispatchDemo.class);
+        list.add(recyclerViewItem);
     }
 
     private void initView() {
@@ -66,10 +68,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     private void switchLayoutManager() {
         RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
-        if(layoutManager instanceof LinearLayoutManager){
-            recyclerView.setLayoutManager(gridLayoutManager);
-        }else if(layoutManager instanceof GridLayoutManager){
+        if(layoutManager instanceof GridLayoutManager){
             recyclerView.setLayoutManager(staggeredGridLayoutManager);
+        }else if(layoutManager instanceof LinearLayoutManager){
+            recyclerView.setLayoutManager(gridLayoutManager);
         }else{
             recyclerView.setLayoutManager(linearLayoutManager);
         }

@@ -9,14 +9,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-public class RecyclerDivider extends RecyclerView.ItemDecoration {
+public class RecyclerViewDivider extends RecyclerView.ItemDecoration {
     private static final int[] ATTRS = new int[]{
             android.R.attr.listDivider
     };
     Drawable mDivider;
     private int mOrientation;
 
-    public RecyclerDivider(Context context, int orientation) {
+    public RecyclerViewDivider(Context context, int orientation) {
         super();
         TypedArray typedArray = context.obtainStyledAttributes(ATTRS);
         mDivider = typedArray.getDrawable(0);
