@@ -7,4 +7,6 @@
     <item name="TAG_NOE" type="id"></item>
     <item name="TAG_TWO" type="id"></item>
     <string name="title_activity_touch_event_dispatch_demo">TouchEventDispatchDemo</string>
+    <string name="title_activity_touch_delegate">TouchDelegateActivity</string>
+    <string name="title_activity_touch_event_dispatch_main">TouchEventDispatchMainActivity</string>
 </resources>

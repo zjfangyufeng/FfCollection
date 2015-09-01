@@ -27,8 +27,19 @@
             android:label="@string/title_activity_alarm" >
         </activity>
         <activity
-            android:name=".activity.TouchEventDispatchDemo"
+            android:name=".activity.TouchEventDispatchViewDemo"
             android:label="@string/title_activity_touch_event_dispatch_demo" >
+        </activity>
+        <activity
+            android:name=".activity.TouchEventDispatchButtonDemo" >
+        </activity>
+        <activity
+            android:name=".activity.TouchDelegateActivity"
+            android:label="@string/title_activity_touch_delegate" >
+        </activity>
+        <activity
+            android:name=".activity.TouchEventDispatchMainActivity"
+            android:label="@string/title_activity_touch_event_dispatch_main" >
         </activity>
     </application>
 

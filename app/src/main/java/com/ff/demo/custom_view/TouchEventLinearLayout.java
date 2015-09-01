@@ -19,15 +19,30 @@ import com.ff.demo.utils.TextViewLog;
 /**
  * TODO: document your custom view class.
  */
-public class MyLinearLayout extends LinearLayout {
+public class TouchEventLinearLayout extends LinearLayout {
     TextViewLog textViewLog;
 
-    public MyLinearLayout(Context context,TextViewLog textViewLog) {
+    public TouchEventLinearLayout(Context context) {
         super(context);
-        this.textViewLog = textViewLog;
-        setOrientation(VERTICAL);
-        setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        init();
     }
+
+    private void init() {
+        setBackgroundColor(Color.BLUE);
+    }
+
+    public TouchEventLinearLayout(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init();
+    }
+
+    public TouchEventLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init();
+    }
+
+
+
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
@@ -47,5 +62,11 @@ public class MyLinearLayout extends LinearLayout {
         return super.onTouchEvent(event);
     }
 
+    public TextViewLog getTextViewLog() {
+        return textViewLog;
+    }
 
+    public void setTextViewLog(TextViewLog textViewLog) {
+        this.textViewLog = textViewLog;
+    }
 }

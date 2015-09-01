@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.ff.demo.R;
-import com.ff.demo.activity.Alarm;
-import com.ff.demo.activity.TouchEventDispatchDemo;
 import com.ff.demo.adapter.RecyclerViewDivider;
 import com.ff.demo.adapter.RecyclerViewAdapter;
 import com.ff.demo.model.RecyclerViewItem;
@@ -38,17 +36,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
         initData();
         MyDisplayMetrics.init(this);
         recyclerViewAdapter = new RecyclerViewAdapter(list);
-        recyclerView.addItemDecoration(new RecyclerViewDivider(this,LinearLayoutManager.VERTICAL));
+        recyclerView.addItemDecoration(new RecyclerViewDivider(this, LinearLayoutManager.VERTICAL));
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
     }
 
     private void initData() {
         list = new ArrayList();
-        RecyclerViewItem recyclerViewItem = new RecyclerViewItem("alarm",Alarm.class);
-        list.add(recyclerViewItem);
-        recyclerViewItem = new RecyclerViewItem("TouchEvent事件分发机制",TouchEventDispatchDemo.class);
-        list.add(recyclerViewItem);
+        list.add(new RecyclerViewItem("alarm",Alarm.class));
+        list.add(new RecyclerViewItem("TouchEvent事件分发机制",TouchEventDispatchMainActivity.class));
+        list.add(new RecyclerViewItem("TouchDelegate",TouchDelegateActivity.class));
     }
 
     private void initView() {

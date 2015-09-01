@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ff.demo.utils.TextViewLog
+        android:id="@+id/textviewlog"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+    </com.ff.demo.utils.TextViewLog>
+
+    <com.ff.demo.custom_view.TouchEventLinearLayout android:orientation="vertical"
+        android:id="@+id/touchevent_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.ff.demo.custom_view.TouchEventButton
+            android:id="@+id/touchevent_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </com.ff.demo.custom_view.TouchEventLinearLayout>
+
+
+
+</LinearLayout>
