@@ -30,8 +30,7 @@
             android:name=".activity.TouchEventDispatchViewDemo"
             android:label="@string/title_activity_touch_event_dispatch_demo" >
         </activity>
-        <activity
-            android:name=".activity.TouchEventDispatchButtonDemo" >
+        <activity android:name=".activity.TouchEventDispatchButtonDemo" >
         </activity>
         <activity
             android:name=".activity.TouchDelegateActivity"
@@ -41,6 +40,30 @@
             android:name=".activity.TouchEventDispatchMainActivity"
             android:label="@string/title_activity_touch_event_dispatch_main" >
         </activity>
+
+        <service
+            android:name=".services.LocalService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".activity.IsServiceActivityInOneThread"
+            android:label="@string/title_activity_is_service_activity_in_one_thread" >
+        </activity>
+
+        <service
+            android:name=".services.AIDLRemoteService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" >
+        </service>
+        <service
+            android:name=".services.MessengerRemoteService"
+            android:enabled="true"
+            android:process=":messenger_remote"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>

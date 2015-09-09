@@ -39,13 +39,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
         recyclerView.addItemDecoration(new RecyclerViewDivider(this, LinearLayoutManager.VERTICAL));
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
+
     }
+
 
     private void initData() {
         list = new ArrayList();
         list.add(new RecyclerViewItem("alarm",Alarm.class));
         list.add(new RecyclerViewItem("TouchEvent事件分发机制",TouchEventDispatchMainActivity.class));
         list.add(new RecyclerViewItem("TouchDelegate",TouchDelegateActivity.class));
+        list.add(new RecyclerViewItem("IsServiceActivityInOneThread",IsServiceActivityInOneThread.class));
     }
 
     private void initView() {

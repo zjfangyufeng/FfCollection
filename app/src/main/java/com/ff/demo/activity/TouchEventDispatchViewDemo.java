@@ -26,6 +26,8 @@ public class TouchEventDispatchViewDemo extends Activity {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         setContentView(linearLayout);
 
+        
+
         textViewLog = new TextViewLog(this);
         textViewLog.setLayoutParams(new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, MyDisplayMetrics.getDensitySize(250)));

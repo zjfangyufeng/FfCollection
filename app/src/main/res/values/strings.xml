@@ -9,4 +9,6 @@
     <string name="title_activity_touch_event_dispatch_demo">TouchEventDispatchDemo</string>
     <string name="title_activity_touch_delegate">TouchDelegateActivity</string>
     <string name="title_activity_touch_event_dispatch_main">TouchEventDispatchMainActivity</string>
+    <string name="title_activity_is_service_activity_in_one_thread">IsServiceActivityInOneThread
+    </string>
 </resources>
