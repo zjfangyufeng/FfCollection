@@ -11,4 +11,12 @@
     <string name="title_activity_touch_event_dispatch_main">TouchEventDispatchMainActivity</string>
     <string name="title_activity_is_service_activity_in_one_thread">IsServiceActivityInOneThread
     </string>
+    <string name="title_activity_clickable_span">ClickableSpanActivity</string>
+    <string name="title_activity_popupwindow">PopupwindowActivity</string>
+    <string name="title_activity_system_window_manager">SystemWindowManagerActivity</string>
+    <string name="title_activity_path_measure">PathMeasureActivity</string>
+    <string name="title_activity_get_wifi_mac">GetWifiMacActivity</string>
+    <string name="title_activity_priority">PriorityActivity</string>
+    <string name="title_activity_customize_progress_bar">CustomizeProgressBarActivity</string>
+    <string name="title_activity_folders">FoldersActivity</string>
 </resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ff.demo.activity.AnimActivity">
+    <Button
+        android:id="@+id/btn"
+        android:text="btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/view"
+        android:layout_centerHorizontal="true"
+        android:background="#ff0000"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <ImageView
+        android:id="@+id/view1"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/guide_pub_circle_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/view2"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/guide_pub_circle_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/view3"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/guide_pub_circle_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
