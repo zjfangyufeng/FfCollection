@@ -8,8 +8,6 @@ android {
         applicationId "com.ff.demo"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 1
-        versionName "1.0"
     }
     buildTypes {
         release {
@@ -22,5 +20,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.1'
-    compile "com.android.support:recyclerview-v7:+"
+    compile "com.android.support:recyclerview-v7:22.1.1"
 }
